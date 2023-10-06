@@ -12,7 +12,7 @@ then
         exit 2
 fi
 
-HOST=$(nslookup -domain=${DOMAIN} $HOST_TEMP | grep Name: | awk '{print $2}')
+HOST=$HOST_TEMP
 if [ "x$HOST" == "x" ]
 then
         echo "$HOST_TEMP not found"
